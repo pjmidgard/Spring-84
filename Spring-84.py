@@ -33,18 +33,8 @@ class compression:
                                 print("Sorry this whole number")
                                 raise SystemExit
                         
-                        Deep12=Deep
-                        Deep12=float(Deep)
-                        Deep12=math.ceil(Deep12)
-                        Deep12=int(Deep12)
-                        Deep12=int(Deep12)
-                        Deep=float(Deep)
-                        Deep=math.ceil(Deep)
-                        Deep=int(Deep)
-                        Deep10=str(Deep)
-                        
-
-                        if type(Deep12) == int:
+                        if x==True:
+                                Deep=int(Deep)
                                 Deep6=65535-25
 
                                 if Deep>Deep6:
@@ -52,7 +42,7 @@ class compression:
 
                                 if Deep<1:
                                         Deep=26
-                                        
+                                                
                                 Deep=Deep+25
                                 Deep2=Deep+2
                                 Deep3=Deep*2
