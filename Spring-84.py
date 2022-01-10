@@ -1,9 +1,10 @@
 from time import time
 cvf=0
-Portal=2
 import os
 import binascii
 import math
+import os.path
+
 
 lenf=0
 name=""
@@ -22,16 +23,38 @@ class compression:
                 if namez=="c" or namez=="e":
                     if namez=="c":
 
-                        Deep = int(input("Please, enter Deep? "))
+                        Deep = str(input("Please, enter Deep? "))
 
-                        Deep6=65535-25
+                        x = Deep.isnumeric()
+                        if x==False:
+                                print("Sorry this whole number")
+                                raise SystemExit
+                        
+                        Deep12=Deep
+                        Deep12=float(Deep)
+                        Deep12=math.ceil(Deep12)
+                        Deep12=int(Deep12)
+                        Deep12=int(Deep12)
+                        Deep=float(Deep)
+                        Deep=math.ceil(Deep)
+                        Deep=int(Deep)
+                        Deep10=str(Deep)
+                        
 
-                        if Deep>Deep6:
-                                Deep=Deep6
-                                
-                        Deep=Deep+25
-                        Deep2=Deep+2
-                        Deep3=Deep*2
+                        if type(Deep12) == int:
+                                Deep6=65535-25
+
+                                if Deep>Deep6:
+                                        Deep=Deep6
+
+                                if Deep<1:
+                                        Deep=26
+                                        
+                                Deep=Deep+25
+                                Deep2=Deep+2
+                                Deep3=Deep*2
+
+                      
                         
                         i=1
 
@@ -52,6 +75,14 @@ class compression:
                     ei8=""
                         
                     name = input("What is name of file? ")
+
+                    if os.path.exists(name):
+                            print('Path is exists!')
+                    else:
+                            print('Path is not exists!')
+                            raise SystemExit
+                            
+                    
                     namem=""
                     namema="?"
         
