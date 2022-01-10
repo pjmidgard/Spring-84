@@ -54,8 +54,6 @@ class compression:
                                 Deep2=Deep+2
                                 Deep3=Deep*2
 
-                      
-                        
                         i=1
 
                     if namez=="e":
