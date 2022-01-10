@@ -624,7 +624,7 @@ class compression:
                                                 sda10=sda3[0:16]
                                                 Deep5 = int(sda10, 2)
                                                 Deep5=Deep5+2
-                                                Deep4=Deep5-1+xc3
+                                                Deep4=Deep5-1
                                                 sda3=sda3[16:]
                                                 lenf6=len(sda3)
                                                 Deep7=Deep5-2
@@ -635,15 +635,11 @@ class compression:
                                                 lenf6=len(sda3)
                                                 print("Deep: ")
                                                 print(Deep7)
-
-                                        if   Circle_times2>0:
-                                                Deep4=Deep5-1
-                                                
-                                                
+    
                                         if C==1 and T!=0:
                                                 sda4=sda3[lenf6-Deep4:lenf6-1]
                                                 sda5=sda3[lenf6-1:lenf6]
-                                                sda3=sda3[0:lenf6-Deep4]
+                                                sda3=sda3[xc3:lenf6-Deep4]
                                         
                                                 
                                                 T7 = int(sda3, 2)
