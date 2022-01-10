@@ -11,17 +11,7 @@ szx=""
 wer=""
         
 
-Deep = int(input("Please, enter Deep? "))
 
-Deep6=65535-25
-
-if Deep>Deep6:
-        Deep=Deep6
-        
-Deep=Deep+25
-Deep2=Deep+2
-Deep3=Deep*2
-Deep4=Deep+1
 
 
 
@@ -36,6 +26,19 @@ class compression:
                 
                 if namez=="c" or namez=="e":
                     if namez=="c":
+
+                        Deep = int(input("Please, enter Deep? "))
+
+                        Deep6=65535-25
+
+                        if Deep>Deep6:
+                                Deep=Deep6
+                                
+                        Deep=Deep+25
+                        Deep2=Deep+2
+                        Deep3=Deep*2
+                        Deep4=Deep+1
+                        
                         i=1
 
                     if namez=="e":
