@@ -685,8 +685,10 @@ class compression:
  
                                             	sda17=bin(T7)[3:]
                                             	lenf14=len(sda17)
+                                            	#print(lenf14)
                                             	lenf16=lenf14%8
                                             	if lenf16!=0:
+
                                             		print("file corrupted")
                                             		raise SystemExit
                                             		
