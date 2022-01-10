@@ -441,6 +441,9 @@ class compression:
                                     lenfS=len(sda17)
                                     #print(lenfS)
 
+                                    if Circle_times2>=(2**48)-3:
+                                            ccc=2
+
 
                                     if ccc==2 and Circle_times2==0:
                                                     sda3=sda3[1:]
@@ -450,6 +453,9 @@ class compression:
                                     
                                     
                                     sda2=sda17
+
+                                    
+                                            
                                     
                                     if ccc==2:
                                             
