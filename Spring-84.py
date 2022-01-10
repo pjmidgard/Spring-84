@@ -5,7 +5,6 @@ import binascii
 import math
 import os.path
 
-
 lenf=0
 name=""
 szx=""
