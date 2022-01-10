@@ -94,11 +94,6 @@ class compression:
                                 print("Sorry, this is not binary file!")
                                 raise SystemExit
                    
-                        	
-                        
-                        	
-                        
-             
                     if i==1:
                         
                         nameas=name+".bin"
