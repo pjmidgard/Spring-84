@@ -29,7 +29,7 @@ class compression:
 
                         x = Deep.isnumeric()
                         if x==False:
-                                print("Sorry this whole number")
+                                print("Sorry this not whole number")
                                 raise SystemExit
                         
                         if x==True:
