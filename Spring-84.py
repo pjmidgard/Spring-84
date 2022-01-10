@@ -456,7 +456,7 @@ class compression:
 
 
                                             sda30=bin(Deep)[2:]
-                                            lenf=len(sda29)
+                                            lenf=len(sda30)
 
                                             szx8=""
                                             xc=16-lenf%16
@@ -490,6 +490,7 @@ class compression:
                                                 lenf=len(sda17)
                                                 szx=""
                                                 xc=8-lenf%8
+                                                xc2=xc
                                                 z=0
                                                 if xc!=0:
                                                         if xc!=8:
@@ -497,11 +498,25 @@ class compression:
                                                                         szx="0"+szx
                                                                         z=z+1
 
-                                           
+                                    if   lenfS<=Deep3 or ccc==2:
+                                    	   
+
+
+                                            sda31=bin(xc2)[2:]
+                                            lenf=len(sda31)
+
+                                            szx9=""
+                                            xc=8-lenf%8
+                                            z=0
+                                            if xc!=0:
+                                                if xc!=8:
+                                                        while z<xc:
+                                                         	szx9="0"+szx9
+                                                         	z=z+1       
 
                                     if   lenfS<=Deep3 or ccc==2:
                                             lenf=len(sda17)                                           
-                                            sda17=szx8+sda30+szx7+sda29+szx+sda17
+                                            sda17=szx9+sda31+szx8+sda30+szx7+sda29+szx+sda17
 
 
 
@@ -582,10 +597,17 @@ class compression:
                               
                                     if C==1:
                                         if   Circle_times2==0:
+
+                                                sda11=sda3[0:8]
+                                                xc3 = int(sda6, 2)
+                                                sda3=sda3[8:]
+                                                lenf6=len(sda3)
+
+                                                
                                                 sda10=sda3[0:16]
                                                 Deep5 = int(sda10, 2)
                                                 Deep5=Deep5+2
-                                                Deep4=Deep5-1
+                                                Deep4=Deep5-1+xc3
                                                 sda3=sda3[16:]
                                                 lenf6=len(sda3)
                                                 Deep7=Deep5-2
