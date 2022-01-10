@@ -19,8 +19,11 @@ class compression:
         def cryptograpy_compression4(self):
                 
                 self.name = "Written: Jurijus pacalovas"
-                
-                if namez=="c" or namez=="e":
+
+                if namez!="c" and namez!="e":
+                        print("The wrong letter")
+                        raise SystemExit
+                if namez=="c" or namez=="e":        
                     if namez=="c":
 
                         Deep = str(input("Please, enter Deep? "))
