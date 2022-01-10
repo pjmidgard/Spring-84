@@ -37,7 +37,6 @@ class compression:
                         Deep=Deep+25
                         Deep2=Deep+2
                         Deep3=Deep*2
-                        Deep4=Deep+1
                         
                         i=1
 
@@ -584,15 +583,19 @@ class compression:
                                     if C==1:
                                         if   Circle_times2==0:
                                                 sda10=sda3[0:16]
-                                                Deep5 = int(sda6, 2)
+                                                Deep5 = int(sda10, 2)
                                                 Deep5=Deep5+2
+                                                Deep4=Deep5-1
                                                 sda3=sda3[16:]
                                                 lenf6=len(sda3)
+                                                Deep7=Deep5-2
                                                 
                                                 sda6=sda3[0:48]
                                                 T = int(sda6, 2)
                                                 sda3=sda3[48:]
                                                 lenf6=len(sda3)
+                                                print("Deep: ")
+                                                print(Deep7)
                                                 
                                         if C==1 and T!=0:
                                                 sda4=sda3[lenf6-Deep4:lenf6-1]
