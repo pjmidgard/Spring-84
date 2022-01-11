@@ -635,11 +635,18 @@ class compression:
                                                 lenf6=len(sda3)
                                                 print("Deep: ")
                                                 print(Deep7)
+                                                
+                                        if   Circle_times2>0:
+                                        	xc3=0
+                                        
+                                        	
     
                                         if C==1 and T!=0:
+                                                sda3=sda3[xc3:]
+                                                lenf6=len(sda3)
                                                 sda4=sda3[lenf6-Deep4:lenf6-1]
                                                 sda5=sda3[lenf6-1:lenf6]
-                                                sda3=sda3[xc3:lenf6-Deep4]
+                                                sda3=sda3[0:lenf6-Deep4]
                                         
                                                 
                                                 T7 = int(sda3, 2)
