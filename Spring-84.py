@@ -415,14 +415,17 @@ class compression:
                                             lenf=len(sda23)
                                             if lenf>Deep:
                                             	ccc=2
-                                            szx4=""
-                                            xc=hr-lenf%hr
-                                            z=0
-                                            if xc!=0:
-                                                if xc!=hr:
-                                                        while z<xc:
-                                                         	szx4="0"+szx4
-                                                         	z=z+1
+
+                                            if ccc==1:
+                                                    
+                                                    szx4=""
+                                                    xc=hr-lenf%hr
+                                                    z=0
+                                                    if xc!=0:
+                                                        if xc!=hr:
+                                                                while z<xc:
+                                                                        szx4="0"+szx4
+                                                                        z=z+1
      
                                     if ccc==1:
                                            
