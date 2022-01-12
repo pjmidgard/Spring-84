@@ -45,6 +45,7 @@ class compression:
                                 Deep=Deep+25
                                 Deep2=Deep+2
                                 Deep3=Deep*2
+                                print(Deep)
 
                         i=1
 
