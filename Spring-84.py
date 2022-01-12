@@ -253,9 +253,6 @@ class compression:
                                             
                                     T7 = int(sda3, 2)
                                     
-                                    if T7<Deep2:
-                                    	ccc=2
-                                   
                                     nameas=name+".bin" 
                                     
                                     bit=""
