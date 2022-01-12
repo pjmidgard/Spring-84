@@ -80,7 +80,7 @@ class compression:
                     nameas=name
                     nac=len(nameas)
                     
-                    ccc=0
+                    ccc=1
 
                     if i==2:
                         if nameas[nac-4:nac]==".bin":
@@ -174,7 +174,6 @@ class compression:
                         sda27=""
                         sda18=""
                         sda29=""
-                        bits="0"
                         Spin=0
                         SpinS=0
                         while END_working<10:
@@ -331,18 +330,22 @@ class compression:
                                     ei=0
                                     T14=0
                                     T21=0
+
+                                    
                                     
                                     if   Circle_times2==0 and SpinS==0:
                                     	sda3="1"+sda3
                                     	SpinS=1
+
+                                    if Circle_times2>=(2**48)-3:
+                                            ccc=2
+                                            
                                     T7 = int(sda3, 2)
                                    
                                     nameas=name+".bin" 
-                                    ccc=1
-                                    bit=""
-                                  
-                                  
                                     
+                                    bit=""
+
                                     e=(2**Deep2)-1
                                     g=0
                                     f=0
@@ -433,20 +436,12 @@ class compression:
                                             sda17=sda17+szx4+sda23+bit
                                             sda18=sda3
                                             #print(len(sda17))
-                                            
-                                            bits="0"
-                                            
                               
-                                    #print(bits)
-                                    
-                                    
-                                   
                                     
                                     lenfS=len(sda17)
                                     #print(lenfS)
 
-                                    if Circle_times2>=(2**48)-3:
-                                            ccc=2
+                                    
 
 
                                     if ccc==2 and Circle_times2==0:
