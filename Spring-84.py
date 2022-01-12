@@ -55,10 +55,7 @@ class compression:
                     sda4=""
                     sda5=""
                     sda6=""
-                    
-                    
-                    ei8=""
-                        
+                      
                     name = input("What is name of file? ")
 
                     if os.path.exists(name):
