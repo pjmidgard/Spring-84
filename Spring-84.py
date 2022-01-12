@@ -715,7 +715,7 @@ class compression:
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
-                                            	if lenf16!=0 or lenf14>=(2**40)-1:
+                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8:
 
                                             		print("file corrupted")
                                             		raise SystemExit
