@@ -394,6 +394,8 @@ class compression:
                                                 lenf=len(sda17)
                                                 szx=""
                                                 xc=8-lenf%8
+                                                if xc==8:
+                                                	xc=0
                                                 xc2=xc
                                                 z=0
                                                 if xc!=0:
