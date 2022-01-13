@@ -354,6 +354,7 @@ class compression:
                                    
                                     
                                     if   lenfS<=Deep3 or ccc==2:
+                                        Circle_times3=Circle_times2
                                         
                                         if ccc==2:
                                         	Circle_times3=Circle_times2-1
