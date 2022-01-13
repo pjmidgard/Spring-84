@@ -55,6 +55,7 @@ class compression:
                     sda4=""
                     sda5=""
                     sda6=""
+                    Corrupted=0
                       
                     name = input("What is name of file? ")
 
@@ -475,6 +476,8 @@ class compression:
 
                                                 sda11=sda3[0:8]
                                                 xc3 = int(sda11, 2)
+                                                if xc3>7:
+                                                        Corrupted=1
                                                 sda3=sda3[8:]
                                                 lenf6=len(sda3)
 
@@ -560,7 +563,7 @@ class compression:
                                             	lenf14=len(sda17)
                                             	#print(lenf14)
                                             	lenf16=lenf14%8
-                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8:
+                                            	if lenf16!=0 or lenf14>=((2**40)-1)*8 or Corrupted==1:
 
                                             		print("file corrupted")
                                             		raise SystemExit
