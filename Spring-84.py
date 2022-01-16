@@ -274,12 +274,12 @@ class compression:
                                                 
                                                 g=g+1
                                           
-                                        if g>(2**Deep)-2:
+                                        if g>(2**Deep)-1:
                                                 bit="1"
                                                 T7=T7-1
                                                 f=1
                                        
-                                    if  g>(2**Deep)-2:
+                                    if  g>(2**Deep)-1:
 	                                    e=(2**Deep2)-1
 	                                    g=0
 	                                    f=0
@@ -296,7 +296,7 @@ class compression:
 	                                                
 	                                                g=g+1
 	                                                
-	                                        if g>(2**Deep)-2:
+	                                        if g>(2**Deep)-1:
 	                                                ccc=2
 	                                                bit=""
 	                                                
