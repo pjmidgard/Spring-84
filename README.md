@@ -7,3 +7,5 @@ E.g.: 32 bits 2 ** 34 and plus the same bits of long of the times: times (2**32)
 Deep: 7 
 
 7+25=32 bits.
+
+This program is for Quantum Supercomputers.
