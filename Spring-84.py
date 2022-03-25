@@ -72,6 +72,7 @@ class compression:
                     nac=len(nameas)
                     
                     compress_or_not_compress=1
+                    Circle_times3=0
 
                     if i==2:
                         if nameas[nac-4:nac]==".bin":
