@@ -301,7 +301,9 @@ class compression:
 	                                                f=1       
                                                
                                     if compress_or_not_compress==1:
-                                    		nameas=name+".bin" 
+                                    		nameas=name+".bin"
+                                    if Number_of_the_file<0:
+                                                        compress_or_not_compress=2
                                     
                                   
                                     if compress_or_not_compress==1:
