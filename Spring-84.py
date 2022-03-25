@@ -163,15 +163,15 @@ class compression:
                             
                                     n = int(Equal_info_between_of_the_cirlce_of_the_file_2, 2)
                                 
-                                    wbits=len(Equal_info_between_of_the_cirlce_of_the_file_2)
-                                    wbits=(wbits/8)*2
-                                    wbits=str(wbits)
-                                    wbits="%0"+wbits+"x"
+                                    width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_2)
+                                    width_bits=(width_bits/8)*2
+                                    width_bits=str(width_bits)
+                                    width_bits="%0"+width_bits+"x"
                              
-                                    wbits3=binascii.unhexlify(wbits % n)
-                                    wbits2=len(wbits3)
+                                    width_bits3=binascii.unhexlify(width_bits % n)                                    
+                                    width_bits2=len(width_bits3)
                                     
-                                    data=wbits3
+                                    data=width_bits3
                                   
                                     lenf5=len(data)
 
@@ -427,18 +427,18 @@ class compression:
                                                 
                                     		L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     		n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
-                                    		wbits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    		wbits=(wbits//8)*2
-                                    		wbits=str(wbits)
-                                    		wbits="%0"+wbits+"x"
-                                    		wbits3=binascii.unhexlify(wbits % n)
-                                    		wbits2=len(wbits3)
+                                    		width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                    		width_bits=(width_bits//8)*2
+                                    		width_bits=str(width_bits)
+                                    		width_bits="%0"+width_bits+"x"
+                                    		width_bits3=binascii.unhexlify(width_bits % n)
+                                    		width_bits2=len(width_bits3)
                                     		add_bitszzza=""
                                     		add_bitszs=""
                                     		Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
                                     		
                                     		with open(nameas, "wb") as f2:
-                                    			f2.write(wbits3)
+                                    			f2.write(width_bits3)
                                     	
                                     		x2 = time()
                                     		x3=x2-x
@@ -581,12 +581,12 @@ class compression:
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                          
                                             n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
-                                            wbits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            wbits=(wbits//8)*2
-                                            wbits=str(wbits)
-                                            wbits="%0"+wbits+"x"
-                                            wbits3=binascii.unhexlify(wbits % n)
-                                            wbits2=len(wbits3)
+                                            width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            width_bits=(width_bits//8)*2
+                                            width_bits=str(width_bits)
+                                            width_bits="%0"+width_bits+"x"
+                                            width_bits3=binascii.unhexlify(width_bits % n)
+                                            width_bits2=len(width_bits3)
 
                                             add_bitszzza=""
                                             add_bitszs=""
@@ -595,7 +595,7 @@ class compression:
                                             with open(nameas, "wb") as f2:
                                             
                                               
-                                            	f2.write(wbits3)
+                                            	f2.write(width_bits3)
                                             x2 = time()
                                             x3=x2-x
                                             xs=float(x3)
