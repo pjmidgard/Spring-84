@@ -156,7 +156,7 @@ class compression:
                                             sda="0"+sda
                                             z=z+1
                                             
-                                    sda=sda+Equal_info_between_of_the_cirlce_of_the_file_2
+                                    
 
                                     if Circle_times3==1:
                                         Equal_info_between_of_the_cirlce_of_the_file_2=sda
