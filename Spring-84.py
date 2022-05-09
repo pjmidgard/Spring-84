@@ -252,8 +252,6 @@ class compression:
                                             
                                     Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
                                     
-                                    nameas=name+".bin" 
-                                    
                                     bit=""
 
                                     e=(2**Deep2)-1
@@ -300,8 +298,7 @@ class compression:
 	                                                
 	                                                f=1       
                                                
-                                    if compress_or_not_compress==1:
-                                    		nameas=name+".bin"
+                                    
                                     if Number_of_the_file<0:
                                                         compress_or_not_compress=2
                                     
