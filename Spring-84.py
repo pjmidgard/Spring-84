@@ -24,12 +24,27 @@ class compression:
                 if namez=="c" or namez=="e":        
                     if namez=="c":
 
+                        Deep = str(input("Please, enter Deep? "))
+
+                        x = Deep.isnumeric()
+                        if x==False:
+                                print("Sorry this not whole number")
+                                raise SystemExit
                         
-                        Deep=1        
-                        Deep7=float("1.3331001")
-                                
-                        Deep3=8
-                        print(Deep7)
+                        if x==True:
+                                Deep=int(Deep)
+                                Deep6=65535-25
+
+                                if Deep>Deep6:
+                                        Deep=Deep6
+
+                                if Deep<1:
+                                        Deep=26
+                                                
+                                Deep=Deep+25
+                                Deep2=Deep+2
+                                Deep3=Deep*2
+                                print(Deep-25)
 
                         i=1
 
@@ -231,42 +246,97 @@ class compression:
                                     if   Circle_times2==0 and SpinS==0:
                                     	Equal_info_between_of_the_cirlce_of_the_file="1"+Equal_info_between_of_the_cirlce_of_the_file
                                     	SpinS=1
-                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+
                                     if Circle_times2>=(2**48)-3:
                                             compress_or_not_compress=2
                                             
                                     Number_of_the_file = int(Equal_info_between_of_the_cirlce_of_the_file, 2)
-
-                                    Number_of_the_file1=Number_of_the_file*Number_of_the_file
-
-                                    Number_of_the_file2=str(Number_of_the_file1)
-
-                                    Number_of_the_file3=len(Number_of_the_file2)
-                                    #print(Number_of_the_file3)
-
-                                    Number_of_the_file4=int(Number_of_the_file3//Deep7)
-                                
-                                    #print(Number_of_the_file4)
-
-                                    Number_of_the_file5=Number_of_the_file2[Number_of_the_file4:]+Number_of_the_file2[:Number_of_the_file3-Number_of_the_file4]
-                                    Number_of_the_file7=len(Number_of_the_file5)
-                                    #print(Number_of_the_file7)
-
-                                    Number_of_the_file6=int(Number_of_the_file5)
                                     
+                                    bit=""
+
+                                    e=(2**Deep2)-1
+                                    g=0
+                                    f=0
                                     
+                                    while f!=1:
+                                        T1=Number_of_the_file%e
+                                        if T1==0:
+                                                Number_of_the_file=Number_of_the_file//e
+                                                f=1
+                                                bit="0"
+
+                                        else:
+                                                e=e+1
+                                                
+                                                g=g+1
+                                          
+                                        if g>(2**Deep)-1:
+                                                bit="1"
+                                                Number_of_the_file=Number_of_the_file-1
+                                                f=1
+                                       
+                                    if  g>(2**Deep)-1:
+	                                    e=(2**Deep2)-1
+	                                    g=0
+	                                    f=0
+	                                
+	                                    while f!=1:
+	                                        T1=Number_of_the_file%e
+	                                        if T1==0:
+	                                                Number_of_the_file=Number_of_the_file//e
+	                                                f=1
+	                                                bit="1"
+	                                           
+	                                        else:
+	                                                e=e+1
+	                                                
+	                                                g=g+1
+	                                                
+	                                        if g>(2**Deep)-1:
+	                                                compress_or_not_compress=2
+	                                                bit=""
+	                                                
+	                                                f=1       
+                                               
                                     
+                                    if Number_of_the_file<0:
+                                                        compress_or_not_compress=2
                                     
-                                    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file6)[2:]
-                                    
+                                  
+                                    if compress_or_not_compress==1:
+                                    	
+                                    	    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                   
+                                    if compress_or_not_compress==1:
+                                    	                          
+                                            Equal_info_between_of_the_cirlce_of_the_file_23=bin(g)[2:]
+                                            hr=Deep
+                                            
+                                        	
+                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_23)
+                                            if lenf>Deep:
+                                            	compress_or_not_compress=2
+
+                                            if compress_or_not_compress==1:
+                                                    
+                                                    add_bits4=""
+                                                    count_bits=hr-lenf%hr
+                                                    z=0
+                                                    if count_bits!=0:
+                                                        if count_bits!=hr:
+                                                                while z<count_bits:
+                                                                        add_bits4="0"+add_bits4
+                                                                        z=z+1
+     
+                                    if compress_or_not_compress==1:
+                                           
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+add_bits4+Equal_info_between_of_the_cirlce_of_the_file_23+bit
+                                            sda18=Equal_info_between_of_the_cirlce_of_the_file
                                             #print(len(Equal_info_between_of_the_cirlce_of_the_file_17))
                               
                                     
                                     lenfS=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                     #print(lenfS)
-
-                                    if lenfS>=lenf6:
-                                            Deep3=lenfS
 
                                     if compress_or_not_compress==2 and Circle_times2==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[1:]
